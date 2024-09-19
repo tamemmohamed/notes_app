@@ -18,11 +18,13 @@ class NoteItemList extends StatelessWidget {
             padding: EdgeInsets.zero,
             itemCount: notes.length,
             itemBuilder: (context, index) {
-              return const Padding(
-                padding: EdgeInsets.symmetric(
+              return Padding(
+                padding: const EdgeInsets.symmetric(
                   vertical: 8,
                 ),
-                child: CustomNoteItem(),
+                child: CustomNoteItem(
+                  note: notes[index],
+                ),
               );
             },
           ),
